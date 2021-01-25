@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: calibri;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #9DD1FF;
+}
+
+#welcome-section{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+  color: white;
+  transition: 300ms color, 300ms font-size;
+}
+
+#welcome-section:hover{
+  color: #43A1F4;
+  font-size: 50px;
+  transition: 300ms;
+}
+
+#navbar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: white;
+  height: 10vh;
+  width: 100%;
+  align-items: center;
+  z-index: 10;
+}
+
+#navbar-button{
+  height: 10vh;
+  transition: 500ms background;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-decoration: none;
+   color: black;
+}
+
+#navbar-text{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#navbar-button:hover{
+  background: #9DD1FF;
+  transition: 500ms;
+}
+
+#projects{
+  background: #43A1F4;
+  display: flex;
+  padding: 10px;
+  height: 50vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profile{
+  background: #208DEE;
+  display: flex;
+  padding: 10px;
+  height: 60vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px){
+  #navbar-text{
+    font-size: 10px;
+}
+}
