@@ -9,7 +9,8 @@ html{
 }
 
 body{
-  background: #9DD1FF;
+  background-color: #208DEE;
+  background-image: linear-gradient(to-right, #43A1F4, #6CB9FD);
 }
 
 #welcome-section{
@@ -24,26 +25,26 @@ body{
 }
 
 #welcome-section:hover{
-  color: #43A1F4;
+ 
   font-size: 50px;
   transition: 300ms;
 }
 
 #navbar{
-  position: fixed;
-  top: 0px;
-  left: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: white;
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   align-items: center;
+  vertical-align: middle;
   z-index: 10;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 #navbar-button{
-  height: 10vh;
+  height: 8vh;
   transition: 500ms background;
   display: grid;
   grid-template-columns: 1fr;
@@ -64,6 +65,34 @@ body{
   transition: 500ms;
 }
 
+#profile-table{
+  overflow: hidden;
+  width: 100%;
+  vertical-align: middle;
+  align-content: center;
+}
+
+img{
+  vertical-align: middle;
+  align-self: center;
+  border-radius: 50%;
+  border: #ffffff 2px solid;
+  box-shadow: 0px 0px 5px #ffffff;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: visible;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
 #projects{
   background: #43A1F4;
   display: flex;
@@ -74,7 +103,7 @@ body{
   align-items: center;
 }
 
-#profile{
+#languages{
   background: #208DEE;
   display: flex;
   padding: 10px;
