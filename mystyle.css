@@ -9,8 +9,15 @@ html{
 }
 
 body{
-  background-color: #208DEE;
-  background-image: linear-gradient(to-right, #43A1F4, #8bc8fd);
+  background: -webkit-gradient(linear, left top, right top, color-stop(#29a9ff), color-stop(#31c0f0)); /* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(to right, #29a9ff, #31c0f0); /* Chrome10+, Safari5.1+ */
+  background: -moz-linear-gradient(to right, #29a9ff, #31c0f0);    /* FF3.6+ */
+  background: linear-gradient(to right, #29a9ff, #31c0f0);      /* W3C */
+
+  /*background-color: #208DEE;
+  background: linear-gradient(to-right, #369ef8, #8dc9fd,  #8bc8fd);
+  background: -moz-linear-gradient(to-right, #369ef8, #8dc9fd,  #8bc8fd);
+  background: -webkit-linear-gradient(to-right, #369ef8, #8dc9fd,  #8bc8fd);*/
 }
 
 
@@ -28,41 +35,6 @@ body{
 #welcome-section:hover{
   font-size: 50px;
   transition: 300ms;
-}
-
-#navbar{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  background: white;
-  height: 8vh;
-  width: 100%;
-  align-items: center;
-  vertical-align: middle;
-  z-index: 10;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-#navbar-button{
-  height: 8vh;
-  transition: 500ms background;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  text-decoration: none;
-   color: black;
-}
-
-#navbar-text{
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-#navbar-button:hover{
-  background: #9DD1FF;
-  transition: 500ms;
 }
 
 #profile-table{
@@ -89,19 +61,6 @@ body{
   box-shadow: 0px 0px 5px #ffffff;
   height: min-content;
   width: min-content;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  visibility: visible;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
 }
 
 #projects{
