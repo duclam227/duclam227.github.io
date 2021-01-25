@@ -10,8 +10,9 @@ html{
 
 body{
   background-color: #208DEE;
-  background-image: linear-gradient(to-right, #43A1F4, #6CB9FD);
+  background-image: linear-gradient(to-right, #43A1F4, #8bc8fd);
 }
+
 
 #welcome-section{
   display: flex;
@@ -25,7 +26,6 @@ body{
 }
 
 #welcome-section:hover{
- 
   font-size: 50px;
   transition: 300ms;
 }
@@ -70,14 +70,25 @@ body{
   width: 100%;
   vertical-align: middle;
   align-content: center;
+  padding: 5px;
 }
 
-img{
-  vertical-align: middle;
-  align-self: center;
+#pro5-img{
   border-radius: 50%;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%;
+  display:block;
+}
+
+#pro5-img-div {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 320px; /* the height of image */
+  vertical-align: middle;
   border: #ffffff 2px solid;
   box-shadow: 0px 0px 5px #ffffff;
+  height: min-content;
+  width: min-content;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
