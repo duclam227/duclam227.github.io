@@ -4,14 +4,29 @@
   <title>Lâm Xương Đức</title>
 </head>
 
-<body>
+<body>    
   <a id="home"></a>
-  <section id="welcome-section">
-    <table id="profile-table">
+  <div id="navbar">
+    <a href="#home" id="navbar-button"><div id="navbar-text">Who I am</div></a>
+    <a href="#languages" id="navbar-button"><div id="navbar-text">What I do</div></a>
+    <a href="#projects" id="navbar-button"><div id="navbar-text">What I've done</div></a>
+    <a href="#home" id="navbar-button"><div id="navbar-text">Who I am</div></a>
+  </div>
+  <div id="show-menu-button" onclick="showMenu()" onmouseout="hideMenu()">MENU</div>
+
+  <section id="welcome-section">  
+    <table style="background-color: transparent;">
       <tr>
-        <td><center><div id="pro5-img-div"><img id="pro5-img" src="a.jpg" height="300"/></div></center></td>
+        <td rowspan="3"><center><div id="pro5-img-div"><img id="pro5-img" height="300" src="a.jpg"></img></div></center></td>
+        <td rowspan="3" style="width: 10px;"> </td>
+        <td><h1>Lâm Xương Đức</h1></td>
       </tr>
-      <tr><td><center><h1>Lâm Xương Đức</h1></center></td></tr>
+      <tr>
+        <td><h6>22/07/2000</h6></td>
+      </tr>
+      <tr>
+        <td><h6>Đại học Khoa học Tự nhiên - ĐHQG TP.HCM<br> Khoa Công nghệ Thông tin</h6></td>
+      </tr>
     </table>
   </section> 
 
@@ -34,17 +49,24 @@
   </section> 
 
   <script>
-    window.onscroll = function() {myFunction()};
-    
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
       } else {
-        navbar.classList.remove("sticky");
+        document.getElementById("navbar").style.top = "-60px";
       }
+      prevScrollpos = currentScrollPos;
+    }
+
+    function showMenu() {
+      document.getElementById("navbar").style.top = "+60px";
+    }
+
+    function hideMenu() {
+      document.getElementById("navbar").style.top = "0";
     }
     </script>
 </body>
