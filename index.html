@@ -7,22 +7,23 @@
 <body>    
   <a id="home"></a>
   <div id="navbar">
-    <a href="#home" id="navbar-button"><div id="navbar-text">Who I am</div></a>
+    <a href="#aboutme" id="navbar-button"><div id="navbar-text">Who I am</div></a>
     <a href="#languages" id="navbar-button"><div id="navbar-text">What I do</div></a>
     <a href="#projects" id="navbar-button"><div id="navbar-text">What I've done</div></a>
     <a href="#home" id="navbar-button"><div id="navbar-text">Who I am</div></a>
   </div>
-  <div id="show-menu-button" onclick="showMenu()" onmouseout="hideMenu()">MENU</div>
+  <a href="#home"><div id="show-menu-button">TOP</div></a>
 
   <section id="welcome-section">  
-    <table style="background-color: transparent;">
+    <a id="#aboutme"></a>
+    <table style="background-color: transparent">
       <tr>
-        <td rowspan="3"><center><div id="pro5-img-div"><img id="pro5-img" height="300" src="a.jpg"></img></div></center></td>
-        <td rowspan="3" style="width: 10px;"> </td>
-        <td><h1>Lâm Xương Đức</h1></td>
+        <td rowspan="3" style=" border: none"><center><div id="pro5-img-div"><img id="pro5-img" height="300" src="a.jpg"></img></div></center></td>
+        <td rowspan="3" style="width: 10px;  border: none"> </td>
+        <td style=" border: none"><h1>Lâm Xương Đức</h1></td>
       </tr>
       <tr>
-        <td><h6>22/07/2000</h6></td>
+        <td style=" border: none"><h6>22/07/2000</h6></td>
       </tr>
       <tr>
         <td><h6>Đại học Khoa học Tự nhiên - ĐHQG TP.HCM<br> Khoa Công nghệ Thông tin</h6></td>
@@ -31,12 +32,20 @@
   </section> 
 
   <section id="languages">
-    <table>
-      <tr>
-        <td></td>
-      </tr>
-    </table>
-    <h1>Who I am</h1>
+    <div id="languages-main-box">
+      <div id="languages-secondary-box">
+        <center>
+          <h5>I am jashdkjasd</h5>
+          <table id="languages-table" style="background-color: transparent;">
+            <tr>
+              <td>C/C++ <br> C#</td>
+              <td>CSS <br> HTML</td>
+              <td style="border-right: none">And... <br> Illustrator <br> Figma</td>
+            </tr>
+          </table>
+      </center>
+      </div>
+    </div>
   </section> 
 
   <section id="projects">
@@ -48,25 +57,4 @@
     <h1>Who I am</h1>
   </section> 
 
-  <script>
-    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-60px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
-
-    function showMenu() {
-      document.getElementById("navbar").style.top = "+60px";
-    }
-
-    function hideMenu() {
-      document.getElementById("navbar").style.top = "0";
-    }
-    </script>
 </body>

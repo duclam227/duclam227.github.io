@@ -14,11 +14,25 @@ body{
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  color: #29a9ff;
 
   background: -webkit-gradient(linear, left top, right top, color-stop(#29a9ff), color-stop(#31c0f0)); /* Chrome, Safari4+ */
   background: -webkit-linear-gradient(to right, #29a9ff, #31c0f0); /* Chrome10+, Safari5.1+ */
   background: -moz-linear-gradient(to right, #29a9ff, #31c0f0);    /* FF3.6+ */
   background: linear-gradient(to right, #29a9ff, #31c0f0);      /* W3C */
+}
+
+table{
+  border-collapse: collapse;
+}
+
+tr{
+  border: none;
+}
+
+td{
+  border-right: 2px #29a9ff solid;
+  padding: 10px;
 }
 
 #show-menu-button{
@@ -31,10 +45,11 @@ body{
   background-color: white;
   color: #94e4ff;
   box-shadow: 0px 0px 2px #ffffff;
+  cursor: pointer;
 }
 
 #navbar{
-  position: fixed;
+  position: absolute;
   top: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -72,7 +87,6 @@ body{
   text-decoration: none;
   transition: 300ms;
 }
-
 
 #welcome-section{
   margin-right: 0px;
@@ -114,14 +128,44 @@ body{
 }
 
 #languages{
-  background: #208DEE;
   display: flex;
-  padding-top: 3vh;
+  padding-top: 2vh;
   height: 100vh;
   width: 100%;
   flex-direction: column;
   align-items: center;
   font-size: 30px;
+}
+
+#languages-main-box{
+  background-color: rgb(255, 255, 255, 0.5);
+  margin: 10px;
+  display: flex;
+  font-size: 25px;
+  height: 90vh;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#languages-secondary-box{
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 25px;
+  height: 75vh;
+  width: 83vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#languages-table{
+  table-layout: fixed;
+  width: 100%;
+  height: 70vh;
+  border: 0px red solid;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px){
