@@ -31,7 +31,7 @@ tr{
 }
 
 td{
-  border-right: 2px #29a9ff solid;
+  border-right: 2px #29a9ff dashed;
   padding: 10px;
 }
 
@@ -97,6 +97,10 @@ td{
   display: flex;
   font-size: 60px;
   color: white;
+
+  background: linear-gradient(rgba(59, 200, 255, 0.5), rgba(59, 200, 255, 0.5)), url("bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #pro5-img{
@@ -127,6 +131,36 @@ td{
   align-items: center;
 }
 
+#body{
+  background-color: red;
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+#body-main-box{
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  font-size: 25px;
+  height: inherit;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact{
+  background: #43A1F4;
+  display: flex;
+  padding-top: 3vh;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
 #languages{
   display: flex;
   padding-top: 2vh;
@@ -135,17 +169,6 @@ td{
   flex-direction: column;
   align-items: center;
   font-size: 30px;
-}
-
-#languages-main-box{
-  background-color: rgb(255, 255, 255, 0.5);
-  margin: 10px;
-  display: flex;
-  font-size: 25px;
-  height: 90vh;
-  width: 90vw;
-  align-items: center;
-  justify-content: center;
 }
 
 #languages-secondary-box{
@@ -160,12 +183,27 @@ td{
   display: flex;
 }
 
+#languages-main-box{
+  background-color: rgb(255, 255, 255, 0.5);
+  margin: 10px;
+  display: flex;
+  font-size: 25px;
+  height: 90vh;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
+}
+
 #languages-table{
   table-layout: fixed;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   border: 0px red solid;
   text-align: center;
+}
+
+#language-des{
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 600px){
